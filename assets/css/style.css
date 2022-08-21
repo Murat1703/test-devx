@@ -370,13 +370,100 @@ a{
     display: flex;
     align-items: center;
 }
+.benefits-inner-txt{
+    width: 512px;
+}
 .benefits-inner-txt__title{
     font-size: 48px;
     font-weight: 700;
+    margin-bottom: 10px;
+}
+.benefits-inner-txt,
+.benefits-inner-txt__title{
+    opacity: 0;
+    transition: .5s ease 0s;
+}
+.benefits-inner-txt._active,
+.benefits-inner-txt__title{
+    opacity: 1;
+    transition: .5s ease 0s
+}
+
+.cards{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.cards li{
+    list-style: none;
+}
+.card-item{
+    width: 246px;
+    height: 220px;
+    background-color: #D9D9D9;
+    border-radius: 10px;
+    position: relative;
+}
+.card-item_space{
+    margin: 0px 10px 10px 0;
+}
+.card-item-logo{
+    position: absolute;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #4CA1F4;
+    top:20px;
+    left:20px;
+}
+.card-item-txt{
+    position: absolute;
+    top:90px;
+    left:20px;    
+}
+.card-item__description__margin{
+    margin: 5px 0 0 0;
+}
+.card-item__title{
+    font-size: 24px;
+    font-weight: 600;
 }
 .benefits-inner-img img{
     width: 592px;
 }
+.how-we-work{
+    width: 100%;
+}
+.how-we-work-inner{
+    display: flex;
+    align-items: center;
+}
+.how-we-work-txt__title{
+    font-size: 48px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+.how-we-work-txt__description{
+    font-size: 16px;
+    font-weight: 500;
+}
+.how-we-work-txt___margin{
+    margin-bottom: 30px;
+}
+.footer-wrapper{
+    background-color: #252525;
+}
+@media (max-width: 1199px){
+    .how-we-work-inner{
+        flex-direction: column-reverse;
+    }
+    .how-we-work-img__margin{
+        margin: 20px 0;
+    }
+    .how-we-work-img img{
+        width: 100%;
+    }
+}
+
 @media (max-width: 767px){
     .menu-list,
     .menu-btn{
@@ -487,5 +574,18 @@ a{
         width: 40px;
         height: 41px;
         top:10%;
+    }
+}
+
+@media (max-width: 560px){
+    .benefits-inner-txt{
+        width: 100%;
+    }
+    .card-item
+    {
+        width: 100%;
+    }
+    .card-item_space{
+        margin: 0 0 10px 0;
     }
 }
