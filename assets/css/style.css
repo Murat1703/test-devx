@@ -580,6 +580,7 @@ a{
 .contacts-btn{
     position: fixed;
     z-index: 3;
+    opacity: 0;
     cursor: pointer;
     bottom: 30px;
     right: 10px;
@@ -587,6 +588,10 @@ a{
     height: 60px;
     border-radius: 50%;
     background-color: #1B5BD8;
+}
+.contacts-btn.__btn_active{
+    opacity: 1;
+    transition: .5s ease all;
 }
 .contacts-btn-inner{
     position: relative;

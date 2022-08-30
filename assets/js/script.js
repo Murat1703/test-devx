@@ -58,6 +58,17 @@ burger.addEventListener('click', function()
 	let WpBtnImg = document.querySelector('.__whatsapp');
 	let instBtnImg = document.querySelector('.__inst');
 	let callBtnImg = document.querySelector('.__phone-call');
+	window.addEventListener('scroll', contBtnOnScroll);
+	function contBtnOnScroll(){
+		if (document.documentElement.scrollTop > 500) {
+			SocialBtn.classList.add('__btn_active');
+		}
+		else {
+			SocialBtn.classList.remove('__btn_active');
+		}
+	};
+	
+
 	SocialBtn.addEventListener('click', clickOnSocial);
 	function clickOnSocial(){
 		SocialBtnInner.classList.toggle('__icon_active');
@@ -66,9 +77,3 @@ burger.addEventListener('click', function()
 		instBtnImg.classList.toggle('__img_active');
 		callBtnImg.classList.toggle('__img_active');
 	}
-
-/*
-Высота Футера =  391
-script.js:64 adsasdasd 618
-script.js:66 Высота окна 648
-*/
