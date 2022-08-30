@@ -580,7 +580,7 @@ a{
 .contacts-btn{
     position: fixed;
     z-index: 3;
-    opacity: 0;
+    display: none;
     cursor: pointer;
     bottom: 30px;
     right: 10px;
@@ -591,7 +591,7 @@ a{
     transition: .5s ease all;
 }
 .contacts-btn.__btn_active{
-    opacity: 1;
+    display: block;
     transition: .5s ease all;
 }
 .contacts-btn-inner{
@@ -617,21 +617,21 @@ a{
     top:17px;
     content: url('../img/cross_icon.svg');
 }
-.__whatsapp.__img_active{
+.__whatsapp.__img_active.__btn_active{
     display: block;
     transition: .5s ease all;
     bottom: 93px;
     opacity: 1;
 }
 
-.__inst.__img_active{
+.__inst.__img_active.__btn_active{
     display: block;
     transition-delay: 1s;
     transition: .5s ease all;
     bottom: 156px;
     opacity: 1;
 }
-.__phone-call.__img_active{
+.__phone-call.__img_active.__btn_active{
     display: block;
     transition-delay: 1s;
     transition: .5s ease all;

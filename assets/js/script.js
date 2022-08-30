@@ -62,9 +62,15 @@ burger.addEventListener('click', function()
 	function contBtnOnScroll(){
 		if (document.documentElement.scrollTop > 500) {
 			SocialBtn.classList.add('__btn_active');
+			WpBtnImg.classList.add('__btn_active');
+			instBtnImg.classList.add('__btn_active');
+			callBtnImg.classList.add('__btn_active');
 		}
 		else {
 			SocialBtn.classList.remove('__btn_active');
+			WpBtnImg.classList.remove('__btn_active');
+			instBtnImg.classList.remove('__btn_active');
+			callBtnImg.classList.remove('__btn_active');
 		}
 	};
 	
