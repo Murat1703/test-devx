@@ -43,4 +43,32 @@ burger.addEventListener('click', function()
 			animOnScroll();
 		}, 300);
 	}
+	$('a[href^="#"').on('click', function() {
+
+		let href = $(this).attr('href');
 	
+		$('html, body').animate({
+			scrollTop: $(href).offset().top
+		});
+		return false;
+	});
+	let SocialBtn = document.querySelector('.contacts-btn');
+	let SocialBtnInner = document.querySelector('.contacts-btn-inner');
+	let SocialBtnImg = document.querySelector('.icon_img');
+	let WpBtnImg = document.querySelector('.__whatsapp');
+	let instBtnImg = document.querySelector('.__inst');
+	let callBtnImg = document.querySelector('.__phone-call');
+	SocialBtn.addEventListener('click', clickOnSocial);
+	function clickOnSocial(){
+		SocialBtnInner.classList.toggle('__icon_active');
+		SocialBtnImg.classList.toggle('__img_active');
+		WpBtnImg.classList.toggle('__img_active');
+		instBtnImg.classList.toggle('__img_active');
+		callBtnImg.classList.toggle('__img_active');
+	}
+
+/*
+Высота Футера =  391
+script.js:64 adsasdasd 618
+script.js:66 Высота окна 648
+*/

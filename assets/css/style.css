@@ -398,12 +398,19 @@ a{
     list-style: none;
 }
 .card-item{
+    cursor: pointer;
     width: 246px;
     height: 220px;
     background-color: #D9D9D9;
     border-radius: 10px;
     position: relative;
 }
+.card-item:hover{
+    background-color: #a9bdd3;
+    transition: .5s ease all;
+
+}
+
 .card-item_space{
     margin: 0px 10px 10px 0;
 }
@@ -464,12 +471,14 @@ a{
     position: relative;
 }
 .footer-logo__margin{
-    padding: 20px 0 0 55px;
+    margin-left: -10px;
+    margin-top: 20px;
+    padding: 0 0 0 55px;
 }
 .footer-logo::before{
     content: url('../img/logo-white.svg');
-    left:0;
-    top:0;
+    left:1px;
+    top:-16px;
     position: absolute;
 }
 .footer-links-company{
@@ -568,6 +577,79 @@ a{
 .footer-links-social__margin{
     margin-top: 20px;
 }
+.contacts-btn{
+    position: fixed;
+    z-index: 3;
+    cursor: pointer;
+    bottom: 30px;
+    right: 10px;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: #1B5BD8;
+}
+.contacts-btn-inner{
+    position: relative;
+}
+.contacts-btn-inner img{
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    right: 16px;
+    top:13px;
+    transition: .5s ease all;
+}
+.contacts-btn-inner.__icon_active img{
+    transform: rotate(270deg);
+    transition: .5s ease all;
+}
+.icon_img.__img_active{
+    width: 24px;
+    height: 24px;
+    position: absolute;
+    right: 18px;
+    top:17px;
+    content: url('../img/cross_icon.svg');
+}
+.__whatsapp.__img_active{
+    display: block;
+    transition: .5s ease all;
+    bottom: 93px;
+    opacity: 1;
+}
+
+.__inst.__img_active{
+    display: block;
+    transition-delay: 1s;
+    transition: .5s ease all;
+    bottom: 156px;
+    opacity: 1;
+}
+.__phone-call.__img_active{
+    display: block;
+    transition-delay: 1s;
+    transition: .5s ease all;
+    bottom: 219px;
+    opacity: 1;
+}
+.__whatsapp{
+    opacity: 0;
+    z-index: 1;
+    background-color: #4CA1F4;
+    transition: .5s ease all;
+}
+.__inst{
+    opacity: 0;
+    z-index: 1;
+    background-color: #4CA1F4;
+    transition: .5s ease all;
+}
+.__phone-call{
+    opacity: 0;
+    z-index: 1;
+    background-color:  #4CA1F4;
+    transition: .5s ease all;
+}
 @media (max-width: 1199px){
     .how-we-work-inner{
         flex-direction: column-reverse;
@@ -592,7 +674,6 @@ a{
     }
 
 }
-
 @media (max-width: 767px){
     .menu-list,
     .menu-btn{
@@ -622,7 +703,6 @@ a{
         top:63px;
         transform: translateY(-1000px);
     }
-
     .menu-mobile.active{
         transform: translateY(0px);
         position: fixed;
@@ -638,15 +718,13 @@ a{
         display: block;
         transform: translateX(-1000px);
         transition: .5s ease;
-    }
-    
+    }    
     .menu-mobile.active li
     {
         display: block;
         transform: translateX(0);
         transition: .5s ease;
     }
-
     .menu-mobile.active li:nth-child(1)
     {
         transition-delay: .1s;
@@ -698,7 +776,6 @@ a{
         top:10%;
     }
 }
-
 @media (max-width: 560px){
     .benefits-inner-txt{
         width: 100%;
@@ -712,7 +789,6 @@ a{
     }
 
 }
-
 @media (max-width: 460px){
     .footer-links{
         grid-template-columns: 100%;
